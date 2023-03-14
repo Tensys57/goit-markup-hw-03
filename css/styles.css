@@ -10,12 +10,45 @@
   --hover-button-bg: #404bbf;
 }
 
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 body {
   background-color: var(--primary-bg-color);
   color: var(--primary-text-color);
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 1.5;
+  outline: 2px solid lightsalmon;
+  margin: 0;
+}
+
+.container {
+  width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  outline: 2px solid lightgreen;
 }
 
 .list {
@@ -26,11 +59,19 @@ body {
 
 .page-header {
   background-color: var(--secondary-bg-colour);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
 }
 
 .logo {
   font-family: "Raleway", sans-serif;
-  color: var(--primary-title-color);
+  color: var(--normal-button-color);
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
@@ -43,12 +84,24 @@ body {
   color: var(--hover-button-bg);
 }
 
-.site-nav a {
+.logo-dark {
+  color: var(--primary-title-color);
+}
+
+.site-nav {
+  display: flex;
+  margin-left: 76px;
+}
+.site-nav .link {
   color: var(--primary-title-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   text-decoration: none;
+}
+
+.site-nav .item:not(:last-child) {
+  margin-right: 40px;
 }
 
 .site-nav .link:hover,
@@ -66,6 +119,15 @@ body {
   font-style: normal;
   font-size: 16px;
   line-height: 1.5;
+}
+
+.contacts-nav {
+  display: flex;
+  margin-left: auto;
+}
+
+.contacts-nav .item + .item {
+  margin-left: 40px;
 }
 
 .contacts-nav a:hover,
@@ -128,18 +190,8 @@ body {
   color: var(--primary-bg-color);
 }
 
-.logo-footer {
-  font-family: "Raleway", sans-serif;
-  color: var(--normal-button-bg);
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 1.17;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-.logo-footer:hover,
-.logo-footer:focus {
-  color: var(--hover-button-color);
+.logo-light {
+  color: var(--primary-bg-color);
 }
 
 /* Portfolio */
