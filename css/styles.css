@@ -8,6 +8,7 @@
   --normal-button-color: #4d5ae5;
   --normal-button-bg: #f4f4fd;
   --hover-button-bg: #404bbf;
+  --button-border-color: #9747ff;
 }
 
 .visually-hidden {
@@ -188,6 +189,8 @@ nav {
   font-size: 16px;
   line-height: 1.5;
   padding: 16px 32px;
+  border: 1px dashed var(--button-border-color);
+  border-radius: 5px;
 }
 
 .hero-button:hover,
@@ -250,16 +253,20 @@ nav {
 
 .team {
   background-color: var(--secondary-bg-colour);
-  max-width: 1440px;
 }
 
 .team-list {
   display: flex;
-  justify-content: center;
 }
 
 .team-list .item:not(:last-child) {
   margin-right: 24px;
+}
+
+.team-list .item {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-portrait {
@@ -279,7 +286,6 @@ nav {
 
 .footer {
   background-color: var(--hero-bg-color);
-  max-width: 1440px;
   padding: 100px 0 100px 156px;
 }
 
@@ -312,11 +318,19 @@ nav {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
+  padding: 12px 24px;
+  border: 1px solid #e7e9fc;
+  border-radius: 4px;
   cursor: pointer;
 }
 
 .filter-btn:hover,
 .filter-btn:focus {
+  background-color: var(--hover-button-bg);
+  color: var(--primary-bg-color);
+}
+
+.active-btn {
   background-color: var(--hover-button-bg);
   color: var(--primary-bg-color);
 }
@@ -327,6 +341,12 @@ nav {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--primary-title-color);
+  padding: 32px 0 0 16px;
+  margin-bottom: 8px;
+}
+
+.project-card-category {
+  padding: 0 0 32px 16px;
 }
 
 .project-cards-list {
