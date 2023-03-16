@@ -255,6 +255,7 @@ nav {
 
 .team-list {
   display: flex;
+  justify-content: center;
 }
 
 .team-list .item:not(:last-child) {
