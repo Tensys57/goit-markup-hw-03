@@ -30,7 +30,6 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  outline: 2px solid lightsalmon;
   margin: 0;
 }
 
@@ -75,8 +74,6 @@ address {
   width: 1158px;
   padding: 0 15px;
   margin: 0 auto;
-
-  outline: 2px solid lightgreen;
 }
 
 .section {
@@ -86,10 +83,11 @@ address {
 /* Header */
 
 .page-header {
-  background-color: var(--secondary-bg-colour);
+  background-color: var(--primary-bg-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid var(--secondary-bg-colour);
 }
 
 nav {
@@ -119,13 +117,14 @@ nav {
 .site-nav {
   display: flex;
   margin-left: 76px;
-  padding: 24px 0;
 }
-.site-nav .link {
+.site-nav-link {
+  display: inline-block;
   color: var(--primary-title-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
+  padding: 24px 0;
 }
 
 .site-nav .item:not(:last-child) {
@@ -203,13 +202,21 @@ nav {
   flex-wrap: wrap;
 }
 
-.feature-list .item {
+.feature-list-item {
   width: 264px;
   margin-right: 24px;
 }
 
-.feature-list .item:last-child {
+.feature-list-item:last-child {
   margin-right: 0;
+}
+
+.features-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--primary-title-color);
 }
 
 /* Products */
@@ -232,7 +239,7 @@ nav {
 }
 /* Team */
 
-.title {
+.team-title {
   color: var(--primary-title-color);
   font-weight: 500;
   font-size: 20px;
@@ -243,6 +250,7 @@ nav {
 
 .team {
   background-color: var(--secondary-bg-colour);
+  width: 1440px;
 }
 
 .team-list {
@@ -284,6 +292,16 @@ nav {
 }
 
 /* Portfolio */
+.filters-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 96px;
+  margin-bottom: 72px;
+}
+
+.filter-list-item:not(:last-child) {
+  margin-right: 24px;
+}
 
 .filter-btn {
   background-color: var(--normal-button-bg);
@@ -299,4 +317,24 @@ nav {
 .filter-btn:focus {
   background-color: var(--hover-button-bg);
   color: var(--primary-bg-color);
+}
+
+.project-card-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--primary-title-color);
+}
+
+.project-cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 24px;
+  margin-bottom: 120px;
+}
+
+.project-card-border {
+  border: 1px solid var(--secondary-bg-colour);
+  border-top: none;
 }
