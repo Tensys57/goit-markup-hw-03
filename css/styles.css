@@ -250,7 +250,7 @@ nav {
 
 .team {
   background-color: var(--secondary-bg-colour);
-  width: 1440px;
+  max-width: 1440px;
 }
 
 .team-list {
@@ -278,6 +278,7 @@ nav {
 
 .footer {
   background-color: var(--hero-bg-color);
+  max-width: 1440px;
   padding: 100px 0 100px 156px;
 }
 
