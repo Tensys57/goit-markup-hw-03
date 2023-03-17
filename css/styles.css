@@ -220,6 +220,15 @@ nav {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--primary-title-color);
+  margin-bottom: 8px;
+}
+
+.feature-list-description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
 }
 
 /* Products */
@@ -286,7 +295,7 @@ nav {
 
 .footer {
   background-color: var(--hero-bg-color);
-  padding: 100px 0 100px 156px;
+  padding: 100px 0 100px 0;
 }
 
 .declaration {
@@ -359,4 +368,5 @@ nav {
 .project-card-border {
   border: 1px solid var(--secondary-bg-colour);
   border-top: none;
+  border-radius: 0px 0px 4px 4px;
 }
